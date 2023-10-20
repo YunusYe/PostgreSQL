@@ -1,0 +1,2 @@
+--Değer ekleme
+insert into yn_musteri (id,ad,soyad,sehir) values(1,'Yunus','Yesilyurt','Sivas');
