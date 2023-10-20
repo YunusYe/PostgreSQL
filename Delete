@@ -1,0 +1,2 @@
+--Satır Silme
+Delete from yn_musteri where id = 10;
