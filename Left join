@@ -1,0 +1,5 @@
+--Left joinn kullanımı
+
+select bolumid,bolumad,bolumf from yn_fakulte left join yn_bolum on yn_fakulte.id=yn_bolum.bolumf 
+
+--sol taraftaki değerleri getirir ve sadece sağda olan değerleri null yapmak için left join kullanırız.
