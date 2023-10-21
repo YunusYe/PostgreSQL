@@ -1,0 +1,5 @@
+--Cross join kullanımı
+
+select * from yn_bolum cross join yn_fakulte 
+
+--cross join herhangi bir şart olmaksızın bütün değerleri bütün değerlerle birleştirir.
