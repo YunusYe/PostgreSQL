@@ -1,0 +1,13 @@
+--Like operatörü
+
+
+--içinde a harfi olan kolonları getirir.
+select * from musteri where ad like '%a%';
+
+
+--ad kolonundan sonu "a" olan verileri getirir.
+select * from musteri where ad like '%a';
+
+
+--ad kolonunda ilk harfi a olan verileri getirir.
+select * from musteri where ad like 'a%';
