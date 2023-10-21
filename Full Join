@@ -1,0 +1,2 @@
+--Full Outer Join
+select * from musteri full join meslek on musteri.meslek=meslek.id
