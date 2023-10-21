@@ -1,0 +1,4 @@
+--group by komutu
+select sehir,count(*) as sehir_sayisi from musteri group by sehir
+select sehir,sum(bakiye) as toplam from musteri group by sehir
+select sehir,avg(bakiye) as ortalama from musteri group by sehir
