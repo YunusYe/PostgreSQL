@@ -1,0 +1,7 @@
+--Inner join kullanımı
+
+
+Select ad,count(*) from yn_bolum inner join yn_fakulte on yn_bolum.bolumf =yn_fakulte.id 
+group by ad
+
+-- herbir fakültede kaç bölüm olduğunu getiren sorgu
