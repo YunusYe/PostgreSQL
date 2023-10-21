@@ -1,0 +1,5 @@
+--Right join kullanımı
+
+select id,ad,bolumad from yn_bolum right join yn_fakulte on yn_fakulte.id=yn_bolum.bolumf 
+
+----sağ taraftaki değerleri getirir ve sadece solda olan değerleri null yapmak için right join kullanırız.
