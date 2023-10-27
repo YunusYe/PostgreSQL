@@ -1,2 +1,5 @@
---Satır Silme
-Delete from yn_musteri where id = 10;
+-- id değeri 110 olan müşteriyi silme:
+
+Delete 
+from yn_musteri 
+where id = 110;
