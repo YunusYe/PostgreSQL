@@ -1,2 +1,12 @@
---Update Komutu
+--id değeri 1 olan müşterinin bakiyesini 500 olarak güncelleme
+
 update yn_musteri set bakiye=500 where id = 1;
+
+
+
+
+-- adı Ahmet olan müşterilerin adını Hamza ile değiştirme.
+
+update yn_musteri
+set ad = 'Hamza' 
+whetre ad = 'Ahmet'
