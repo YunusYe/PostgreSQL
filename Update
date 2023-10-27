@@ -1,2 +1,1 @@
---Update Komutu
-update yn_musteri set bakiye=500 where id = 1;
+
