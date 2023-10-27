@@ -1,0 +1,71 @@
+PRIMARY KEY (Birincil anahtar): 
+
+
+-- alter = değiştirmek          constraint = kısıtlama
+-- not null = boş olamaz        unique = eşsiz (benzersiz)
+-- Tablodaki satırı benzersiz(eşsiz) şekilde tanımlamak için kullanılan bir sütun grubudur.
+-- Primary key kısıtlaması; not-null ve unique kısıtlamalarının kombinasyonundan oluşur.
+-- Bir tablo yalnızca bir primary key'e sahip olabilir.
+-- Tabloya primary key eklendiğinde PostgreSQL , sütun grubunda benzersiz bir B-tree dizini oluşturur.
+
+
+
+-- Tablo oluştururken primary key kullanmak : 
+
+create table table_Name(
+  	column_1 data_type primary key ,
+  	column_2 data_type,
+    column_3 data_type,
+  	...
+);
+
+
+
+--Primary key'in 2 veya daha fazla sütundan oluşması durumunda primary key kısıtlamasını şu şekilde tanımlarız;
+
+create table tableName(
+	column_1 data_type,
+	column_2 data_type,
+  column_3 data_type,
+	...
+	primary key (column_1,column_2,column_3)
+);
+
+-- Birincil anahtar kısıtlamasının adı açıkça belirtilmezse PostgreSQL, birincil anahtar kısıtlamasına default bir ad atayacaktır.
+-- PostgreSQL birincil anahtar kısıtlamasının default adı olarak table-name_pkey'i kullanır.
+
+
+MEVCUT TABLONUN YAPISI DEĞİŞTİRİLDİĞİNDE PRIMARY KEY TANIMLAMA:
+
+-- Bu durumda; alter table kullanarak bir primary key kısıtlaması eklenebilir. 
+
+alter table table_name add primary key (column_1, column_2);
+
+
+
+MEVCUT BİR TABLOYA OTOMATİK OLARAK ARTAN BİR PRIMARY KEY NASIL EKLENİR ?
+
+-- Örnek : 
+
+--greengrocer adında bir tablo oluşturalım.
+create table greengrocer 
+  (
+    name varchar(255)
+  );
+
+-- insert komutu ile greengrocer tablosuna değerler ekleyelim.
+insert into greengrocer (name) values
+	('Toby'),
+	('Barney'),
+	('Alex'),
+	('Veli'),
+  ('Ali');
+	
+-- g_id adında ve otomatik artan şekilde bir primary key eklemek istersek ; 
+
+alter table greengrocer add column id serial primary key ;
+alter table greengrocer add column g_id serial primary key ;
+
+--PRIMARY KEY NASIL SİLİNİR ?
+alter table table_name drop constraint primary_key_constraint;
+alter table greengrocer drop constraint greengrocer1_pkey;
