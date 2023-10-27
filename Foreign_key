@@ -1,6 +1,7 @@
 -- FOREIGN KEY (Yabancı anahtar)
 
--- Foreign key ; bir tablodaki, başka bir tablonun primary key'ine başvuran kolon grubudur.
+
+-- Başka bir tablonun birincil anahtarının bir diğer tablo içerisinde yer almasıdır
 -- Foreign key içeren tabloya referans tablosu (referencing table) denir(child table). 
 -- Foreign key tarafından başvurulan tabloya; başvurulan tablo (referenced table) veya ana tablo (parent table) denir.
 
